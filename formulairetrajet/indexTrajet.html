@@ -58,13 +58,13 @@
                               </div>
                             <div class="form-group">
                                 <div class="cols-sm-12">
-                                <label>model *</label> <input required  type="text" name="model" value="exemple:peugeut 206" class="form-control"></input>
+                                <label>model *</label> <input required  type="text" name="model" placeholder="exemple:peugeut 206" class="form-control"></input>
                                 </div>
                                 <div class="cols-sm-12">
                                   <label> couleur *<label></label><input required  type="color" name="color" value="transparent" class="form-control"></input>
                                 </div>
                                 <div class="cols-sm-12">
-                                  <label>matricule *</label><input required  type="text" name="matricule" value="exemple:B98054fr" class="form-control"></input>
+                                  <label>matricule *</label><input required  type="text" name="matricule" placeholder="exemple:B98054fr" class="form-control"></input>
                                 </div>
                                 
                             </div>
@@ -81,24 +81,22 @@
                                 <div class="cols-sm-12">
                                 <input required type="text" class="form-control" name="titre" placeholder="Titre de votre annonce"/>
                                 </div>
+                                
                                 <div class="cols-sm-12">
-                                <input required type="number" class="form-control" name="prix" placeholder="le prix trajet"/>
+                                  <input required class="form-control"   type="number" name="nb_place" placeholder="Nomber de palce" ></input>
                                 </div>
                                 <div class="cols-sm-12">
-                                  <input required  type="number" name="nb_place" value="nomber de place" class="form-control"></input>
+                                <textarea required class="form-control" name="detailAnnonce" placeholder="Décrivez en detail votre annonce"></textarea>
                                 </div>
                                 <div class="cols-sm-12">
-                                <textarea class="form-control" placeholder="Décrivez en detail votre annonce"></textarea>
-                                </div>
-                                <div class="cols-sm-12">
-                                <textarea class="form-control" placeholder="Décrivez en detail votre preference"></textarea>
+                                <textarea class="form-control" name="detailPreference" placeholder="Décrivez en detail votre preference"></textarea>
                                 </div>
                             </div>
     
                             <div class="form-group">
                                 <div class="cols-sm-12">
                                 <div class="input-group">
-                                <input required type="text" class="form-control" name="pays" placeholder="Votre prix"/><span class="dirhame" >MAD</span>
+                                <input required type="text" class="form-control" name="prix" placeholder="Votre prix"/><span class="dirhame" >MAD</span>
                                 
                                 </div>
                             </div>
@@ -110,9 +108,17 @@
                               </div>
                               </div>
                             <div class="form-group">
-                                <label for="files" class="btn btn-info m-3"><i class="glyphicon glyphicon-camera"></i> Ajouter des images </label>
+                                <label for="profil" class="btn btn-info m-3">
+                                  <i class="glyphicon glyphicon-user"></i> Ajouter photo profile </label>
                                 <div class="cols-sm-12">
-                                <input required type="file" id="files" name="files[]" multiple />
+                                <input  type="file"  name="profil" hidden />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="permis[]" class="btn btn-info m-3">
+                                  <i class="glyphicon glyphicon-user"></i> Ajouter recto-verso Permis </label>
+                                <div class="cols-sm-12">
+                                <input required type="file"  name="permis[]" multiple hidden  />
                                 </div>
                             </div>
     
