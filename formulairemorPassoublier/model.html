@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- This script got from frontendfreecode.com -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.js'></script>
+<style>
+body {
+    background-color: #333;
+}
+
+#btnStart {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#message {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    display: none;
+}
+img{
+    position: relative;
+    left: 24%
+}
+
+</style>
+
+</head>
+<body>
+<a href="indexMotPasse_oublier.html" id="btnStart"   data-toggle="modal" data-target="#formModal">Let's fill in a form!</a>
+
+<div id="message">
+    Thank you for filling in the awesome form and sending all data on your computer to US. >:)
+</div>
+
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content pos">
+            <div class="modal-header d-flex flex-column ">
+                <img class="position-relative start-50" src="https://i.ibb.co/rshckyB/car-key.png" alt="car-key">
+                        <h2 class="text-center">oublier mot de passe?</h2>
+                        <p>vous pouvez reset votre mot de passe d'ici</p>
+            </div>
+            <form id="formAwesome">
+                <div class="form-group">
+                    <div class="input-group">
+                        <select class="form-control  m-3" >
+                            <option selected="true" disabled>Please Select Security Question</option>
+                            <option>Which is your favorite movie?</option>
+                            <option>What is your pet's name?</option>
+                            <option>What is the name of your village?</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group " >
+                    <div class="input-group">
+                        <span class="input-group-addon" >
+                            <i class="glyphicon glyphicon-envelope color-blue"></i>
+                        </span>
+                        <input  type="text" name="forgetAnswer" placeholder="Answer" class="form-control m-3" >
+                    </div>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                    <input name="btnForget" class="btn btn-lg btn-primary btn-block btnForget" style="width:150px" value="Reset" type="submit">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+var form = document.getElementById("formAwesome");
+form.addEventListener("submit", onSubmitForm);
+
+function onSubmitForm(e) {
+    e.preventDefault();
+    $('#formModal').modal('hide');
+    $('#btnStart').hide();
+    $('#message').show();
+}
+</script>
+
+</body>
+</html>

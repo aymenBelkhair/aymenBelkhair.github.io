@@ -1,0 +1,93 @@
+ 	/* Coded with love by Mutiullah Samim */
+     .container{
+        background: url(bg.jpg) no-repeat center center fixed;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: cover;
+       
+        }
+     body,
+     html {
+         margin: 0;
+         padding: 0;
+         height: 100%;
+         text-transform: capitalize;
+         /* background:#33323a */
+        
+     }
+     .user_card {
+         height: 400px;
+         width: 350px;
+         margin-top: auto;
+         margin-bottom: auto;
+         background-color:transparent;
+         box-shadow:0px 1px 20px 20px #60a3bc inset;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         padding: 10px;
+         border-radius: 5px;
+
+     }
+     .brand_logo_container {
+         position: absolute;
+         height: 170px;
+         width: 170px;
+         top: -75px;
+         border-radius: 50%;
+         background: #60a3bc;
+         padding: 10px;
+         text-align: center;
+     }
+     .brand_logo {
+         height: 150px;
+         width: 150px;
+         border-radius: 50%;
+         border: 2px solid white;
+     }
+     .form_container {
+         margin-top: 100px;
+     }
+     .login_btn {
+         width: 100%;
+         background: #60a3bc ;
+         color: white ;
+     }
+     .login_btn:focus {
+         box-shadow: none ;
+         outline: 0px ;
+     }
+     .login_container {
+         padding: 0 2rem;
+     }
+     .input-group-text {
+         background: #60a3bc ;
+         color: white ;
+         border: 0 ;
+         border-radius: 0.25rem 0 0 0.25rem ;
+     }
+     .input_user,
+     .input_pass:focus {
+         box-shadow: none ;
+         outline: 0px ;
+     }
+     .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+         background-color: #60a3bc ;
+     }
+     /* model */
+
+     .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #64a5be;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 2.3rem;
+        outline: 0;
+        text-transform: capitalize;
+    }
